@@ -9,3 +9,9 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
 }
+
+@media screen and (max-width: 600px) {
+    .mobile {
+        content: url("./assets/images/bg-mobile.svg");
+    }
+}

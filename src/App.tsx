@@ -1,10 +1,10 @@
 import Footer from './components/Footer';
 import Button from "./components/Button.tsx";
 import Icon from "./components/Icon.tsx";
+import Card from "./components/Card.tsx";
 
 import side_image from './assets/images/illustration-mockups.svg';
 import bg_image_desktop from './assets/images/bg-desktop.svg';
-import bg_image_mobile from './assets/images/bg-mobile.svg';
 import logo from './assets/images/logo.svg';
 
 import { CgFacebook } from 'react-icons/cg';
@@ -19,32 +19,49 @@ function App() {
       value: "Register",
       size: "",
       color: "Violet",
+      hover: "white",
     },
     bg_color: "white",
+    hover_color: "Soft-Magenta",
     rounded: true,
     round_size: "2xl",
     shadow_size: "2xl",
     onClick: () => {
-      console.log("")
+      console.log("it works!!")
     }
   }
   const facebook_icon = {
     Icon: CgFacebook,
     rounded: true,
     color: "white",
+    hover: "Violet",
   }
   const twitter_icon = {
     Icon: TfiTwitterAlt,
     rounded: true,
     color: "white",
+    hover: "Violet",
   }
   const instagram_icon = {
     Icon: SiInstagram,
     rounded: true,
     color: "white",
+    hover: "Violet",
   }
-
   const icons = [facebook_icon, twitter_icon, instagram_icon];
+  const card_content = {
+    title: {
+      text: "Build The Community Your Fans Will Love",
+      size: "4xl",
+      color: "white",
+    },
+    description: {
+      text: "Huddle re-imagines the way we build communities. You have a voice, but so does your audience.\n" +
+        "Create connections with your users as you engage in genuine discussion.",
+      size: "sm",
+      color: "white"
+    },
+  };
 
   return (
     <>
@@ -62,32 +79,37 @@ function App() {
         '>
         {/* bg image */}
         <div
+          className="
+            absolute
+            top-0
+            left-0
+            sm:w-fit
+            sm:h-full
+            h-fit
+            w-full
+            -z-1
+          ">
+          <img
             className="
-              absolute
-              top-0
-              left-0
               w-full
               h-full
-              -z-1
-            ">
-            <img
-                className="
-                  w-full
-                  h-full
-                "
-                alt="bg"
-                src={bg_image_desktop}
-                srcSet={`${bg_image_desktop} w-1440, ${bg_image_mobile} w-600`}
-            />
-        </div>
+              mobile
+            "
+            alt="bg"
+            src={bg_image_desktop}
+          />
+      </div>
         {/* top left brand icon */}
         <div
           className='
-            absolute
-            top-10
-            left-20
+            sm:absolute
+            sm:top-10
+            sm:left-40
             w-40
             h-20
+            flex
+            ml-8
+            self-start
           '>
           <img
             className="
@@ -100,43 +122,68 @@ function App() {
         </div>
         {/* main container */}
         <main
-            className="
-              m-auto
-              z-1
-              flex
-              flex-row
-              items-center
-              justify-center
-              w-fit
-              h-fit
-            ">
+          className="
+            z-1
+            flex
+            sm:flex-row
+            flex-col
+            items-center
+            justify-center
+            sm:text-start
+            text-center
+            w-fit
+            h-fit
+            sm:space-x-8
+            sm:absolute
+            mx-8
+            sm:right-40
+            sm:left-40
+            sm:space-y-0
+            space-y-6
+            m-auto
+          ">
           {/* side image */}
-          <div>
-            <img className="" alt="side image" src={side_image}/>
+          <div className="flex-2 h-full">
+            <img className="w-full h-full" alt="side image" src={side_image}/>
           </div>
           {/* right side main content */}
-          <div>
-           <div>
-             Build The Community Your Fans Will Love
-
-             Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
-             Create connections with your users as you engage in genuine discussion.
-           </div>
+          <div
+            className="
+              flex-1
+              flex
+              flex-col
+              justify-center
+              sm:items-start
+              items-center
+              space-y-6
+            ">
+            <Card {...card_content}/>
             <Button {...btn_content} />
           </div>
         </main>
         {/* bottom right icons */}
         <div
           className='
+            sl:my-0
+            mb-12
             flex
             space-x-4
+            sm:absolute
+            sm:right-40
+            sm:bottom-10
           '>
           {icons.map((value, index) => {
             return <Icon {...value} key={index} />
           })}
         </div>
         {/* footer */}
-        <Footer />
+        <div
+          className="
+            absolute
+            bottom-0
+          ">
+          <Footer />
+        </div>
       </div>
     </>
   )
