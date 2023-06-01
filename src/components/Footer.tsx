@@ -8,7 +8,7 @@ const Footer = () => {
         ">
         Challenge by
         <a
-          className='text-blue-b1'
+          className='text-white'
           rel='noopener'
           href="https://www.frontendmentor.io?ref=challenge"
           target="_blank">
@@ -17,7 +17,7 @@ const Footer = () => {
         </a>.
         Coded by
         <a
-          className='text-blue-b1'
+          className='text-white'
           href="#">
           {" "}
           Achraf YOUSSEF

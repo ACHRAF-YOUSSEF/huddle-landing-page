@@ -7,8 +7,12 @@ export default {
       xl: "1440px",
     },
     extend: {
+      zIndex: {
+        1: '1',
+      },
       colors: {
-        "blue-b1": "hsl(228, 45%, 44%)",
+        Violet: 'hsl(257, 40%, 49%)',
+        'Soft-Magenta': 'hsl(300, 69%, 71%)',
       },
     },
   },
