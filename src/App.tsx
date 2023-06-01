@@ -15,38 +15,38 @@ import './App.css';
 
 function App() {
   const btn_content = {
-    text: {
-      value: "Register",
-      size: "",
-      color: "Violet",
-      hover: "white",
-    },
     bg_color: "white",
     hover_color: "Soft-Magenta",
-    rounded: true,
-    round_size: "2xl",
-    shadow_size: "2xl",
     onClick: () => {
       console.log("it works!!")
-    }
+    },
+    round_size: "2xl",
+    rounded: true,
+    text: {
+      color: "Violet",
+      hover: "white",
+      size: "",
+      value: "Register",
+    },
+    shadow_size: "2xl"
   }
   const facebook_icon = {
     Icon: CgFacebook,
-    rounded: true,
     color: "white",
-    hover: "Violet",
+    hover: "Soft-Magenta",
+    rounded: true,
   }
   const twitter_icon = {
     Icon: TfiTwitterAlt,
-    rounded: true,
     color: "white",
-    hover: "Violet",
+    hover: "Soft-Magenta",
+    rounded: true,
   }
   const instagram_icon = {
     Icon: SiInstagram,
-    rounded: true,
     color: "white",
-    hover: "Violet",
+    hover: "Soft-Magenta",
+    rounded: true,
   }
   const icons = [facebook_icon, twitter_icon, instagram_icon];
   const card_content = {
@@ -75,7 +75,6 @@ function App() {
           bg-Violet
           w-screen
           h-screen
-          -z-1
         '>
         {/* bg image */}
         <div
@@ -87,7 +86,6 @@ function App() {
             sm:h-full
             h-fit
             w-full
-            -z-1
           ">
           <img
             className="
@@ -123,7 +121,6 @@ function App() {
         {/* main container */}
         <main
           className="
-            z-1
             flex
             sm:flex-row
             flex-col

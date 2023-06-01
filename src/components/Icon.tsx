@@ -20,12 +20,14 @@ const Icon: React.FC<IconProps> = ({
         border-${color}
         text-${color}
         hover:text-${hover}
+        hover:border-${hover}
         border-2
         ${rounded? 'rounded-full' : ''}
         p-2
         cursor-pointer
       `}>
       <Icon />
+      <div className="hidden hover:border-Soft-Magenta"/>
     </div>
   );
 };

@@ -18,7 +18,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   text,
   bg_color,
-  hover_color  ,
+  hover_color,
   rounded,
   round_size,
   shadow_size,
@@ -31,20 +31,19 @@ const Button: React.FC<ButtonProps> = ({
         value={text.value}
         onClick={onClick}
         className={`
-        w-fit
-        h-fit
-        bg-${bg_color}
-        ${rounded? `rounded-${round_size}` : ''}
-        ${shadow_size? `shadow-${shadow_size} shadow-black`: ''}   
-        py-2
-        sm:px-10
-        px-20
-        text-center
-        text-${text.size} 
-        text-${text.color}
-        hover:bg-${hover_color}
-        hover:text-${text.hover}
-        cursor-pointer
+          w-fit
+          h-fit
+          bg-${bg_color}
+          ${rounded? `rounded-${round_size}` : ''}
+          ${shadow_size? `shadow-${shadow_size} shadow-black`: ''}   
+          py-2
+          px-20
+          text-center
+          text-${text.size} 
+          text-${text.color}
+          hover:bg-${hover_color}
+          hover:text-${text.hover}
+          cursor-pointer
       `}/>
       <div
         className="
@@ -64,6 +63,7 @@ const Button: React.FC<ButtonProps> = ({
           border-white
           hover:text-white
           hover:text-Violet
+          hover:border-Violet
         "/>
     </>
   );
