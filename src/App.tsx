@@ -11,7 +11,6 @@ function App() {
           flex-col
           justify-center
           items-center
-          
         '>
         <div></div>
         <main>
